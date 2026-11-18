@@ -79,7 +79,6 @@ class FileProcessor:
             # Check if a file object exists and is still open
             if file is not None and file.closed == False:
                 file.close()
-    pass
 
 #Define the IO class
 
@@ -159,8 +158,6 @@ class IO:
             print(f'Student {student["FirstName"]} '
                   f'{student["LastName"]} is enrolled in {student["CourseName"]}')
         print("-" * 50)
-
-    pass
 
 # When the program starts, read the file data into a table
 # Extract the data from the file
