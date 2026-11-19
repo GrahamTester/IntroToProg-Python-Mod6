@@ -47,9 +47,11 @@ class FileProcessor:
         try:
             file = open(FILE_NAME, "r")
             students = json.load(file)
+        except FileNotFoundError as e:
+            IO.output_error_messages("Error: Enrollments.json not found.",e)
         except Exception as e:
             IO.output_error_messages("Error: There was a problem reading from"
-                                     " the file. Please check tha the file "
+                                     " the file. Please check that the file "
                                      "exists and that it is in "
                                      "a json format.",e)
         finally:
